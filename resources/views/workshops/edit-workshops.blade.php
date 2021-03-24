@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('title')
-  Workshops and Seminars
+  Edit Workshops and Seminars
 @endsection
 
 @section('content')
@@ -27,6 +27,8 @@
               <div class="mt-10">
                 <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="{{ url($workshop->event_url) }}">Register</a>
                 <a href="{{ url('/workshop-details/'.$workshop->id) }}" class="btn btn-dark btn-sm mt-10">Details</a>
+                <a href="{{ url('/edit-workshop/'.$workshop->id) }}" class="btn btn-dark btn-sm mt-10">Edit</a>
+                <a onclick="return confirm('Are you sure you want to delete this workshop?')" href="{{ url('/delete-workshop/'.$workshop->id) }}" class="btn btn-dark btn-sm mt-10">Delete</a>
               </div>
             </div>
           </div>

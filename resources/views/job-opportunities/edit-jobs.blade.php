@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('title')
-  Careers and Job Listings
+  Edit List of Careers and Job Listings
 @endsection
 
 @section('content')
@@ -15,6 +15,7 @@
                   <th width>Description</th>
                   <th width="10%">Job Type</th>
                   <th width="15%">Additional Information</th>
+
                 </tr>
               </thead>
               <tbody>
@@ -24,7 +25,11 @@
                       <td>{{ $job->job_name }}</td>
                       <td>{!! nl2br(e($job->job_description)) !!}</td>
                       <td>{{ $job->job_type }}</td>
-                      <td><a href="{{ url('/job-details/'.$job->id) }}"><button>Details</button></a></td>
+                      <td>
+                        <a href="{{ url('/job-details/'.$job->id) }}"><button>Details</button></a>
+                        <a href="{{ url('/edit-job/'.$job->id) }}">&nbsp;<button>Edit</button></a>
+                        <a onclick="return confirm('Are you sure you want to update this job?')" href="{{ url('/delete-job/'.$job->id) }}">&nbsp;<button>Delete</button></a>
+                      </td>
                     </tr>
                   @endforeach
               </tbody>

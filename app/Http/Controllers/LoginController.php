@@ -12,11 +12,12 @@ class LoginController extends Controller
     	// get the form details
     	$credentials = request()->only('email', 'password');
     	// match it with a record in the database
-    	// authenticate
+
+      // authenticate
     	if(Auth::attempt($credentials)) {
 	    	// redirect /home
-    		return redirect('/home');
-    	}	
+    		return redirect('/');
+    	}
 
     	return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
@@ -25,6 +26,7 @@ class LoginController extends Controller
 
     public function logout()
     {
+      // built in logout feature of laravel
     	Auth::logout();
     	return redirect('/');
     }
