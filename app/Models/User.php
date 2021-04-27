@@ -21,6 +21,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'verification',
     ];
 
     /**
@@ -45,5 +46,10 @@ class User extends Authenticatable
     public function hasRole($role)
     {
       return $this->role == $role;
+    }
+
+    public function verificationStatus($verification)
+    {
+      return $this->verification == $verification;
     }
 }

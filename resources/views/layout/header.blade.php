@@ -38,6 +38,31 @@
               </li>
               <li class="#"><a href="/about-us">About</a>
               </li>
+              <li class="#"><a href="#">Accounts</a>
+                <ul class="dropdown">
+                  <li><a href="/register-admin">Add Admin Account</a></li>
+                  <li><a href="/register-student-as-admin">Add Student Account</a></li>
+                  <li><a href="/edit-accounts">Edit All Accounts</a></li>
+                  <li><a href="/logout">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+            @elseif(Auth::check() && Auth::user()->hasRole('Student') && Auth::user()->verificationStatus('Verified'))
+            <ul class="menuzord-menu">
+              <li class="#"><a href="/">Home</a>
+              </li>
+              <li class="#"><a href="/job-opportunities">Job Opportunities</a>
+              </li>
+              <li class="#"><a href="/workshops">Workshop</a>
+              </li>
+              <li class="#"><a href="/resume-builder">Resume Builder</a>
+              </li>
+              <li class="#"><a href="">Career Test</a>
+              </li>
+              <li class="#"><a href="/events">Events</a>
+              </li>
+              <li class="#"><a href="/about-us">About</a>
+              </li>
               <li class="#"><a href="/logout">Logout</a>
               </li>
             </ul>

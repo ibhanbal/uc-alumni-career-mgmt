@@ -8,6 +8,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="LearnPress | Education & Courses HTML Template" />
 <meta name="keywords" content="academy, course, education, education html theme, #, learning," />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <!-- Page Title -->
 <title>UC Career Guidance</title>
@@ -77,26 +78,98 @@
 <div id="wrapper" class="clearfix">
   <!-- preloader -->
   <!-- Start main-content -->
-  @include('layout.header')
-  <div class="main-content">
-    <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="/images/bg/bg-header.jpg">
-      <div class="container pt-30 pb-30">
-        <!-- Section Content -->
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h3 class="font-32 text-white">
-                @yield('title')
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section>
-      @yield('content')
+      <section class="">
+        <div class="container">
+          <div class="section-content">
+            <div class="row">
+                <div>
+                  <h3>{{ $basic_info['name'] }}</h3>
+                  <h4 class="text-theme-colored">{{ $basic_info['grad_course'] }}</h4>
+                  <h4 class="text-theme-colored">{{ $basic_info['ter_course'] }}</h4>
+                </div>
+
+                <br />
+
+                <h4 class="line-bottom">Contact Information:</h4>
+                <div class="row">
+                  <div class="col-sx-12 col-sm-4 col-md-4">
+                    <div class="bg-light media border-bottom-theme-colored-2px p-15 mb-20">
+                      <div class="media-left">
+                        <i class="fa fa-map-marker text-theme-colored font-24 mt-5"></i>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-0">Address:</h5>
+                        <p>{{ $basic_info['address'] }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sx-12 col-sm-4 col-md-4">
+                    <div class="bg-light media border-bottom-theme-colored-2px p-15 mb-20">
+                      <div class="media-left">
+                        <i class="fa fa-phone text-theme-colored font-24 mt-5"></i>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-0">Phone:</h5>
+                        <p>{{ $basic_info['contact_num'] }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sx-12 col-sm-4 col-md-4">
+                    <div class="bg-light media border-bottom-theme-colored-2px p-15 mb-20">
+                      <div class="media-left">
+                        <i class="fa fa-envelope-o text-theme-colored font-24 mt-5"></i>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-0">Email:</h5>
+                        <p>{{ $basic_info['email'] }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-content">
+              <div class="row">
+                <div>
+                  <h4 class="line-bottom">About Me:</h4>
+                  <dl class="dl-horizontal doctor-info">
+                    <dt>Educational Attainment</dt>
+                    <dd>
+                      <ul class="list theme-colored angle-double-right m-0">
+                        <p class="text-theme-colored"><b>{{ $basic_info['grad_course'] }}</b></p>
+                        <li>{{ $basic_info['grad_school'] }}</li>
+                        <li>{{ $basic_info['grad_address'] }}</li>
+                        <li>Year Graduated: {{ $basic_info['grad_graduated'] }}</li>
+                      </ul>
+                      <ul class="list theme-colored angle-double-right m-0">
+                        <hr>
+                        <p class="text-theme-colored"><b>{{ $basic_info['ter_course'] }}</b></p>
+                        <li>{{ $basic_info['ter_school'] }}</li>
+                        <li>{{ $basic_info['ter_address'] }}</li>
+                        <li>Year Graduated: {{ $basic_info['ter_graduated'] }}</li>
+                      </ul>
+                    </dd>
+                    <hr>
+
+                    <dt>Work Experience</dt>
+
+                    <hr>
+
+                    <dt>Skills</dt>
+
+                    <hr>
+
+                    <dt>Achievements</dt>
+
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </section>
     </section>
   </div>
   <!-- end main-content -->
@@ -108,6 +181,9 @@
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="{{asset('/js/custom.js')}}"></script>
+
+
+
 
 </body>
 

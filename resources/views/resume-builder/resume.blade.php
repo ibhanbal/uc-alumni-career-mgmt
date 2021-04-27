@@ -4,9 +4,7 @@
 @endsection
 
 @section('content')
-<section class="">
-  <div class="container">
-
+  <div class="container pt-0 myDivToPrint" id="bruh">
     <div class="section-content">
       <div class="row">
           <div>
@@ -116,6 +114,32 @@
       </div>
 
   </div>
-</section>
 
+<div class="text-center">
+  <button onClick="printDiv('bruh')">Kill Me</button>
+</div>
+
+<script>
+  function printDiv(divName){
+			var printContents = document.getElementById(divName).outerHTML;
+			var originalContents = document.body.outerHTML;
+
+			document.body.outerHTML = printContents;
+
+			window.print();
+
+			document.body.outerHTML = originalContents;
+
+		}
+</script>
+
+<!-- <div class="text-center">
+  <form name="create_resume_pdf" method="POST" action="{{ url('/resume-pdf') }}">
+    @csrf
+    @foreach($basic_info as $data)
+      <input name="somedata[]" value="{{ $data }}" type="hidden">
+    @endforeach
+    <button type="submit" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Print PDF</button>
+  </form>
+</div> -->
 @endsection

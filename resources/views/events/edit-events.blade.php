@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-<section id="upcoming-events" class="divider parallax layer-overlay overlay-white-8" data-bg-img="images/bg/bg1.jpg">
+<section id="upcoming-events" class="divider parallax layer-overlay overlay-white-8" data-bg-img="images/bg/bg-event.jpeg">
   <div class="container pb-50 pt-80">
     <div class="section-content">
       <div class="row">
