@@ -50,7 +50,7 @@ class LoginController extends Controller
 
       $new_account->save();
 
-      return redirect('/home');
+      return redirect('/');
     }
 
     public function registerAccountStudentAsAdmin(Request $request)
