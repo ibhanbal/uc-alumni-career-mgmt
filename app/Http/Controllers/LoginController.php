@@ -46,11 +46,11 @@ class LoginController extends Controller
       $new_account->email = $new_email;
       $new_account->password = bcrypt($new_password);
       $new_account->role = 'Student';
-      $new_account->verification = 'Not-Verified';
+      $new_account->verification = 'Verified';
 
       $new_account->save();
 
-      return redirect('/verification');
+      return redirect('/home');
     }
 
     public function registerAccountStudentAsAdmin(Request $request)
