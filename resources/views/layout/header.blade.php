@@ -27,7 +27,7 @@
               </li>
               <li class="#"><a href="/resume-builder">Resume Builder</a>
               </li>
-              <li class="#"><a href="">Career Test</a>
+              <li class="#"><a href="/career-test">Career Test</a>
               </li>
               <li class="#"><a href="#">Events</a>
                 <ul class="dropdown">
@@ -57,7 +57,7 @@
               </li>
               <li class="#"><a href="/resume-builder">Resume Builder</a>
               </li>
-              <li class="#"><a href="">Career Test</a>
+              <li class="#"><a href="/career-test">Career Test</a>
               </li>
               <li class="#"><a href="/events">Events</a>
               </li>
@@ -76,7 +76,7 @@
               </li>
               <li class="#"><a href="/resume-builder">Resume Builder</a>
               </li>
-              <li class="#"><a href="">Career Test</a>
+              <li class="#"><a href="/career-test">Career Test</a>
               </li>
               <li class="#"><a href="/events">Events</a>
               </li>
@@ -95,7 +95,7 @@
               </li>
               <li class="#"><a href="/resume-builder">Resume Builder</a>
               </li>
-              <li class="#"><a href="">Career Test</a>
+              <li class="#"><a href="/career-test">Career Test</a>
               </li>
               <li class="#"><a href="/events">Events</a>
               </li>

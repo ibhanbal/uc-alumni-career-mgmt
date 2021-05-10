@@ -6,6 +6,7 @@ use App\Http\Controllers\WorkshopsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ResumeBuilderController;
+use App\Http\Controllers\CareerTestController;
 use App\Models\User;
 
 // Home
@@ -47,12 +48,14 @@ Route::middleware(['auth', 'role_checked:Admin'])->group(function () {
 	Route::get('/delete-account/{id}', [LoginController::class, 'deleteAccount']);
 });
 
-
 // Test Routes
 Route::get('/add-user', function() {
 	User::create([
 		'name' => 'admin',
 		'email' => 'admin@admin.com',
+		'role' => 'Admin',
+		'uc_id' =>'1234',
+		'verification' => 'Verified',
 		'password' => bcrypt('password')
 	]);
 });
@@ -62,6 +65,8 @@ Route::get('/add-user2', function() {
 		'name' => 'student',
 		'email' => 'student@student.com',
 		'role' => 'Student',
+		'uc_id' =>'1234',
+		'verification' => 'Verified',
 		'password' => bcrypt('password')
 	]);
 });
@@ -132,3 +137,9 @@ Route::middleware(['auth', 'acct_verified:Verified'])->group(function () {
 // LoginController Routes
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout']);
+
+// CareerTestController Routes
+Route::middleware(['auth', 'acct_verified:Verified'])->group(function () {
+	Route::get('/career-test', [CareerTestController::class, 'index']);
+	Route::post('/career-results', [CareerTestController::class, 'careerResults']);
+});

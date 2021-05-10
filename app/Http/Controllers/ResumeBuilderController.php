@@ -29,6 +29,16 @@ class ResumeBuilderController extends Controller
       'ter_school' => $request->input('input_ter_school'),
       'ter_address' => $request->input('input_ter_address'),
       'ter_graduated' => $request->input('input_ter_graduated'),
+
+      'sec_course' => $request->input('input_sec_course'),
+      'sec_school' => $request->input('input_sec_school'),
+      'sec_address' => $request->input('input_sec_address'),
+      'sec_graduated' => $request->input('input_sec_graduated'),
+
+      'pri_course' => $request->input('input_pri_course'),
+      'pri_school' => $request->input('input_pri_school'),
+      'pri_address' => $request->input('input_pri_address'),
+      'pri_graduated' => $request->input('input_pri_graduated'),
     );
 
     $skills = $request->input('input_skill');

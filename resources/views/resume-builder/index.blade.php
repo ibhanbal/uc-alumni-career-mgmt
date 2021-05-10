@@ -8,7 +8,7 @@
   <form id="create_resume" name="create_resume" method="POST" action="{{ url('/resume') }}">
     @csrf
     <div class="row">
-      <h3 class="gen-info">General Information</h3>
+      <h2 class="gen-info text-center">General Information</h2>
       <div class="col-sm-12">
         <div class="form-group">
           <h4 class="title">Name</h4>
@@ -35,9 +35,11 @@
       </div>
     </div>
     <div id="edu-att" class="row">
-      <h3 class="title">Educational Attainment</h3>
-      <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('grad-school')">Add Graduate School</button>
-      <div id="grad-school" style="display: none;" class="row">
+      <h2 class="title text-center">Educational Attainment</h2>
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('grad-school')">Add Graduate School</button>
+      </div>
+      <div id="grad-school" style="display: none;" class="container">
         <h4 class="title">Graduate School Education</h4>
         <div class="col-sm-12">
           <div class="form-group">
@@ -65,8 +67,10 @@
         </div>
       </div>
       <br />
-      <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('ter-edu')">Add Tertiary Education</button>
-      <div id="ter-edu" style="display: none;" class="row">
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('ter-edu')">Add Tertiary Education</button>
+      </div>
+      <div id="ter-edu" style="display: none;" class="container">
         <h4 class="title">Tertiary Education</h4>
         <div class="col-sm-12">
           <div class="form-group">
@@ -93,11 +97,75 @@
           </div>
         </div>
       </div>
+      <br />
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('sec-edu')">Add Seconday Education</button>
+      </div>
+      <div id="sec-edu" style="display: none;" class="container">
+        <h4 class="title">Secondary Education</h4>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Course</h4>
+            <input name="input_sec_course" class="form-control" type="text" placeholder="Enter Course">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Name of School</h4>
+            <input name="input_sec_school" class="form-control" type="text" placeholder="Enter School Name">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Address</h4>
+            <input name="input_sec_address" class="form-control" type="text" placeholder="Enter School Address">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Year Graduated</h4>
+            <input name="input_sec_graduated" class="form-control" type="date" placeholder="Enter Year Graduated">
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('pri-edu')">Add Primary Education</button>
+      </div>
+      <div id="pri-edu" style="display: none;" class="container">
+        <h4 class="title">Primary Education</h4>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Course</h4>
+            <input name="input_pri_course" class="form-control" type="text" placeholder="Enter Course">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Name of School</h4>
+            <input name="input_pri_school" class="form-control" type="text" placeholder="Enter School Name">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Address</h4>
+            <input name="input_pri_address" class="form-control" type="text" placeholder="Enter School Address">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <h4 class="title">Year Graduated</h4>
+            <input name="input_pri_graduated" class="form-control" type="date" placeholder="Enter Year Graduated">
+          </div>
+        </div>
+      </div>
     </div>
     <div id="work-exp" class="row">
-      <h3 class="title">Work Experience</h3>
-      <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="addWorkExp()">Add Additional Work Experience</button>
-      <div id="works" class="row">
+      <h2 class="title text-center">Work Experience</h2>
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="addWorkExp()">Add Additional Work Experience</button>
+      </div>
+      <div id="works" class="container">
         <h4 class="title">Experience</h4>
         <div id="work" class="col-sm-12">
           <div class="form-group">
@@ -115,8 +183,10 @@
       <br />
     </div>
     <div id="skill-list" class="row">
-      <h3 class="title">Skill List</h3>
-      <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="addSkillFields()">Add Skill</button>
+      <h2 class="title text-center">Skill List</h2>
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="addSkillFields()">Add Skill</button>
+      </div>
       <div class="row">
         <div class="col-sm-12">
           <div id="skills" class="form-group">
@@ -126,8 +196,10 @@
       </div>
     </div>
     <div id="achievement-list" class="row">
-      <h3 class="title">Achievement List</h3>
-      <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="addAchievementFields()">Add Achievement</button>
+      <h2 class="title text-center">Achievement List</h2>
+      <div class="text-center">
+        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="addAchievementFields()">Add Achievement</button>
+      </div>
       <div class="row">
         <div class="col-sm-12">
           <div id="achievements" class="form-group">
