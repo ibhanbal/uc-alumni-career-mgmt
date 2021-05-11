@@ -60,7 +60,7 @@ class WorkshopsController extends Controller
       if( $request->hasFile('image')) {
         $image = $request->file('image');
         $path = public_path(). '/images/workshop-images/';
-        $filename = $workshop->name . '_' . $workshop->start_date . '.' . $image->getClientOriginalExtension();
+        $filename = $workshop->name . '_' . $image->getClientOriginalExtension();
         $image->move($path, $filename);
         $workshop->image_url=$filename;
       }
@@ -124,7 +124,7 @@ class WorkshopsController extends Controller
       if( $request->hasFile('image')) {
         $image = $request->file('image');
         $path = public_path(). '/images/workshop-images/';
-        $filename = $workshop->name . '_' . $workshop->start_date . '.' . $image->getClientOriginalExtension();
+        $filename = $workshop->name . '_' . $image->getClientOriginalExtension();
         $image->move($path, $filename);
         $workshop->image_url = $filename;
       }
