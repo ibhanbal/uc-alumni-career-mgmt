@@ -6,8 +6,8 @@
 <!-- Meta Tags -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<meta name="description" content="LearnPress | Education & Courses HTML Template" />
-<meta name="keywords" content="academy, course, education, education html theme, #, learning," />
+<meta name="description" content="UC Career Guidance" />
+<meta name="keywords" content="university, career, guidance, cordilleras, baguio, alumni," />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <!-- Page Title -->

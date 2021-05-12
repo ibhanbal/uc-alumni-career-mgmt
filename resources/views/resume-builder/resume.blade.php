@@ -9,7 +9,6 @@
     <div class="row">
       <div>
         <h3>{{ $basic_info['name'] }}</h3>
-        <h4 class="text-theme-colored">{{ $basic_info['grad_course'] }}</h4>
         <h4 class="text-theme-colored">{{ $basic_info['ter_course'] }}</h4>
       </div>
       <br />
@@ -59,13 +58,6 @@
           <dt>Educational Attainment</dt>
           <dd>
             <ul class="list theme-colored angle-double-right m-0">
-              <p class="text-theme-colored"><b>{{ $basic_info['grad_course'] }}</b></p>
-              <li>{{ $basic_info['grad_school'] }}</li>
-              <li>{{ $basic_info['grad_address'] }}</li>
-              <li>Year Graduated: {{ $basic_info['grad_graduated'] }}</li>
-            </ul>
-            <ul class="list theme-colored angle-double-right m-0">
-              <hr>
               <p class="text-theme-colored"><b>{{ $basic_info['ter_course'] }}</b></p>
               <li>{{ $basic_info['ter_school'] }}</li>
               <li>{{ $basic_info['ter_address'] }}</li>

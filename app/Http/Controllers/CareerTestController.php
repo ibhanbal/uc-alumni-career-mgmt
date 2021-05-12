@@ -12,6 +12,11 @@ class CareerTestController extends Controller
     return view('career-test.index');
   }
 
+  public function careerTest()
+  {
+    return view('career-test.career-test');
+  }
+
   public function careerResults(Request $request)
   {
 

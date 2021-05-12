@@ -37,37 +37,6 @@
     <div id="edu-att" class="row">
       <h2 class="title text-center">Educational Attainment</h2>
       <div class="text-center">
-        <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('grad-school')">Add Graduate School</button>
-      </div>
-      <div id="grad-school" style="display: none;" class="container">
-        <h4 class="title">Graduate School Education</h4>
-        <div class="col-sm-12">
-          <div class="form-group">
-            <h4 class="title">Course</h4>
-            <input name="input_grad_course" class="form-control" type="text" placeholder="Enter Course">
-          </div>
-        </div>
-        <div class="col-sm-12">
-          <div class="form-group">
-            <h4 class="title">Name of School</h4>
-            <input name="input_grad_school" class="form-control" type="text" placeholder="Enter School Name">
-          </div>
-        </div>
-        <div class="col-sm-12">
-          <div class="form-group">
-            <h4 class="title">Address</h4>
-            <input name="input_grad_address" class="form-control" type="text" placeholder="Enter School Address">
-          </div>
-        </div>
-        <div class="col-sm-12">
-          <div class="form-group">
-            <h4 class="title">Year Graduated</h4>
-            <input name="input_grad_graduated" class="form-control" type="date" placeholder="Enter Year Graduated">
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="text-center">
         <button type="button" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" onclick="enableFields('ter-edu')">Add Tertiary Education</button>
       </div>
       <div id="ter-edu" style="display: none;" class="container">

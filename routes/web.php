@@ -140,6 +140,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 // CareerTestController Routes
 Route::middleware(['auth', 'acct_verified:Verified'])->group(function () {
-	Route::get('/career-test', [CareerTestController::class, 'index']);
+	Route::get('/career-test-instructions', [CareerTestController::class, 'index']);
+	Route::get('/career-test', [CareerTestController::class, 'careerTest']);
 	Route::post('/career-results', [CareerTestController::class, 'careerResults']);
 });
