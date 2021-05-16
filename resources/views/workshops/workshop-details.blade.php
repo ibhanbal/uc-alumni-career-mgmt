@@ -35,7 +35,7 @@
       </ul>
     </div>
     <div class="col-md-8">
-      <img style="width: 755px; height: 480px;" src="{{ asset('images/workshop-images/' . $workshop->image_url) }}" alt="{{ asset('images/workshop-images/workshop-placeholder') }}">
+      <img style="width: 755px; height: 480px;" src="{{ asset('images/workshop-images/' . $workshop->image_url) }}" alt="{{ asset('images/workshop-images/workshop-placeholder.jpg') }}">
     </div>
   </div>
   <div class="row mt-60">
