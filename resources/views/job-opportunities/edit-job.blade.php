@@ -36,7 +36,7 @@
     <div class="col-sm-12">
       <div class="form-group">
         <h4 class="title">Job Description</h4>
-        <textarea name="input_job_description" class="form-control required" rows="8">{!! nl2br(e($job->job_description)) !!}</textarea>
+        <textarea name="input_job_description" class="form-control required" rows="8">{{ $job->job_description }}</textarea>
       </div>
     </div>
     <div class="col-sm-12">
