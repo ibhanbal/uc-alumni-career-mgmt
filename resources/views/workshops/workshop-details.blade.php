@@ -35,7 +35,7 @@
       </ul>
     </div>
     <div class="col-md-8">
-      <img style="width: 755px; height: 480px;" src="{{ asset('images/workshop-images/' . $workshop->image_url) }}" alt="{{ url('https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') }}">
+      <img style="width: 755px; height: 480px;" src="{{ asset('images/workshop-images/' . $workshop->image_url) }}" alt="https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
     </div>
   </div>
   <div class="row mt-60">
