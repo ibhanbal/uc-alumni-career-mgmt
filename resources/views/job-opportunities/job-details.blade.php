@@ -38,7 +38,7 @@
     <p class="mb-20">{{ $job->job_type }}</p>
     <br />
     <h4>REQUIREMENTS</h4>
-    <p class="mb-20">{{ $job->job_requirements }}</p>
+    <p class="mb-20">{!! nl2br(e($job->job_requirements)) !!}}</p>
     <br />
   </div>
 </div>
