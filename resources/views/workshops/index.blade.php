@@ -12,7 +12,7 @@
         <div class="col-sm-6 col-md-4 col-lg-4">
           <div class="schedule-box maxwidth500 bg-light mb-30">
             <div class="thumb">
-              <img class="img-fullwidth" alt="" style="width: 220px; height: 200px;" src="{{ asset('images/workshop-images/' . $workshop->image_url) }}" alt="{{ asset('images/workshop-images/workshop-placeholder.jpg') }}">
+              <img class="img-fullwidth" alt="" style="width: 220px; height: 200px;" src="{{ asset('images/workshop-images/' . $workshop->image_url) }}" alt="{{ url('https://drive.google.com/file/d/1RVZutLWjx-sPVEMok_wHVlDk3coJ_CCB/view?usp=sharing') }}">
               <div class="overlay">
                 <a href="{{ url('/workshop-details/'.$workshop->id) }}"><i class="fa fa-calendar mr-5"></i></a>
               </div>
