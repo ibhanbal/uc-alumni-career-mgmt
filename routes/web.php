@@ -49,27 +49,27 @@ Route::middleware(['auth', 'role_checked:Admin'])->group(function () {
 });
 
 // Test Routes
-Route::get('/add-user', function() {
-	User::create([
-		'name' => 'admin',
-		'email' => 'admin@admin.com',
-		'role' => 'Admin',
-		'uc_id' =>'1234',
-		'verification' => 'Verified',
-		'password' => bcrypt('password')
-	]);
-});
-
-Route::get('/add-user2', function() {
-	User::create([
-		'name' => 'student',
-		'email' => 'student@student.com',
-		'role' => 'Student',
-		'uc_id' =>'1234',
-		'verification' => 'Verified',
-		'password' => bcrypt('password')
-	]);
-});
+// Route::get('/add-user', function() {
+// 	User::create([
+// 		'name' => 'admin',
+// 		'email' => 'admin@admin.com',
+// 		'role' => 'Admin',
+// 		'uc_id' =>'1234',
+// 		'verification' => 'Verified',
+// 		'password' => bcrypt('password')
+// 	]);
+// });
+//
+// Route::get('/add-user2', function() {
+// 	User::create([
+// 		'name' => 'student',
+// 		'email' => 'student@student.com',
+// 		'role' => 'Student',
+// 		'uc_id' =>'1234',
+// 		'verification' => 'Verified',
+// 		'password' => bcrypt('password')
+// 	]);
+// });
 
 // About Us Route
 Route::get('/about-us', function() {
